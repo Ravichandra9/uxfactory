@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML forms</title>
+  </head>
+  <body style="background-color: chartreuse">
+    <h1 style="text-align: center">Registration Desk</h1>
+
+    <form name="log in" action="/login.php" target="_self" method="POST">
+      <label for="fname"> First name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Please Enter First Name"
+      /><br />
+      <br />
+      <label for="middle name"> Middle name:</label>
+      <input
+        type="text"
+        id="Middlename"
+        name="middle name"
+        placeholder="Please Enter Middle Name"
+      /><br />
+      <br />
+      <label for="lname">Last name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        placeholder=" Please Enter Last Name"
+      /><br />
+      <br />
+      <hr />
+      <label for="password"> Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Please Enter Password"
+      /><br /><br />
+      <label for="date of birth"> DOB: </label>
+      <input type="date" id="date" name="date" /><br /><br />
+      <label> Gender </label><br /><br />
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male"> Male</label><br /><br />
+      <input type="radio" id="Female" name="gender" value="female" />
+      <label for="female"> Female</label><br /><br />
+      <input type="radio" id="Others" name="gender" value="others" />
+      <label for="others"> Others</label><br /><br />
+      <hr />
+      <label for="districts"> choose District</label>
+      <select id="district" name="district">
+        <option value="prakasam">Prakasam</option>
+        <option value="Nellore">Nellore</option>
+        <option value="Chittor">Chittor</option>
+        <option value="Kadapa">Kadapa</option>
+        <option value="Ananthapur">Ananthapur</option>
+        <option value="Kurnool">Kurnool</option>
+        <option value="West Godavari">West Godavari</option>
+        <option value="East Godavari">East Godavari</option>
+        <option value="Srikakulam">Srikakulam</option>
+        <option value="Vizayanagram">Vizayanagram</option>
+        <option value="Vishakapatnam">Vishakapatnam</option>
+        <option value="Guntur">Guntur</option>
+        <option value="Krishna">Krishna</option>
+      </select>
+      <br /><br /><br />
+      <hr />
+
+      <label for="Acedamic Quqlifications">Acedamic Quqlifications:</label>
+      <select id="Educational details" name="Educational details">
+        <option value=" S.S.C">S.S.C</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="B.E/B.Tech">B.E/B.Tech</option>
+        <option value="M.s/M.Tech">M.s/M.Tech</option></select
+      ><br /><br />
+      <hr />
+      <label> languages:</label><br /><br />
+      <input type="checkbox" id="language1" name="language1" value="English" />
+      <label for="english">English</label> <br /><br />
+      <input type="checkbox" id="language2" name="language2" value="Telugu" />
+      <label for="telugu"> Telugu</label> <br /><br />
+      <input type="checkbox" id="language3" name="language3" value="Hindi" />
+      <label for="hindi">Hindi</label><br /><br />
+      <hr />
+      <label> Description</label>
+      <textarea id="Description" name="Description" rows="10" cols="50">
+ Description will be here </textarea
+      ><br /><br />
+      <hr />
+      <label for="email me"> Mail Id </label>
+      <input type="email" id="emailid" name="email" /><br /><br />
+      <hr />
+      <label for="photo"> Choose a File to upload</label>
+      <input type="file" id="file" name="file" /><br /><br />
+      <hr />
+
+      <br />
+      <br />
+      <button type="submit">Register</button>
+      <button type="reset">reset</button>
+    </form>
+  </body>
+</html>
