@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo classes and Pseudo Class Elements</title>
+    <style>
+    /*     article :hover{
+            font-style: italic;
+            font: bolder;
+            color: blueviolet;
+        }
+        article :last-child{
+            font-style: normal;
+            font-weight: 900;
+            color: chartreuse;
+        }
+        article :nth-child(odd){
+            font-size: larger;
+            font-weight: bolder;
+            color: cyan;
+        } */
+
+
+/* 
+        p::first-letter{
+            font-weight: bolder;
+            font-style: italic;
+            color: darkorchid;
+        }
+        ::selection{
+            color: coral;
+        }
+        ::first-line{
+            font-style: italic;
+            color: cyan;
+        }
+        ::placeholder{
+            color: darkgreen;
+        } */
+
+        ul li:nth-child(1n) :not(li4){
+            color: darkgreen;
+        }
+        header:nth-child(1n) :not(h4){
+            color: darkorchid;
+        }
+        ul li:not(:nth-of-type(4)) {
+        color: deeppink;
+      }
+
+    </style>
+  </head>
+  <body>
+    <article>
+        <h1> Heading1</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        recusandae facere a illo debitis blanditiis tenetur fugiat consequatur
+        assumenda! Est labore, laborum odio cupiditate quas quidem suscipit
+        asperiores adipisci laboriosam!
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui blanditiis
+        autem obcaecati, nemo debitis nulla magni molestiae assumenda illum,
+        facere natus labore aperiam? Iste commodi ea ipsam dolor unde qui
+        eveniet consequuntur architecto debitis delectus aperiam fuga
+        reprehenderit, recusandae perspiciatis?
+      </p>
+      <ul>
+          <li> list 1</li>
+          <li> list 2</li>
+          <li> list 3</li>
+          <li> list 4</li>
+          <li> list 5</li>
+          <li> list 6</li>
+      </ul>
+      <header>
+          <h1> heading 1</h1>
+          <h2> heading 1</h2>
+          <h3> heading 1</h3>
+          <h4> heading 1</h5>
+          <h5> heading 1</h5>
+          <h6> heading 1</h6>
+      </header>
+      <div>
+          <div>div1</div>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <div>div3</div>
+          <div>div4</div>
+          <div>div5</div>
+      </div>
+    </article>
+  </body>
+</html>

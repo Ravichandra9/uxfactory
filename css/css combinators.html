@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Combinators</title>
+    <style>
+      /*desedent selector*/
+      div p {
+        background-color: cadetblue;
+      }
+      /*child selector*/
+      div > p {
+        background-color: chartreuse;
+      }
+      /*adjacent sibiling selector*/
+      div + p {
+        background-color: cyan;
+      }
+      /* General sibling selector*/
+      div ~ p {
+        background-color: darkmagenta;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Heading</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+        fugiat?
+      </p>
+      <section><p>Lorem ipsum dolor sit amet.</p></section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+        illo.
+      </p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+  </body>
+</html>

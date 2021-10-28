@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html and css media queries</title>
+    <style>
+        .column1 {
+        background-color: chartreuse;
+        float: left;
+        width: 20%;
+      }
+      .column2 {
+        background-color: darkseagreen;
+        float: left;
+        width: 20%;
+      }
+      .column3 {
+        background-color: crimson;
+        float: left;
+        width: 20%;
+      }
+      .column4 {
+        background-color: dodgerblue;
+        float: left;
+        width: 20%;
+      }
+      .column5 {
+        background-color: greenyellow;
+        float: left;
+        width: 20%;
+      @media only screen and (max-width: 500px) {
+        .columns {
+          width: 25%;
+        
+        }
+      }
+      @media only screen and (min-width: 500px) {
+        .columns {
+          width: 20%;
+          
+        }
+      }
+      @media only screen and (max-width: 1000px) {
+        .columns {
+          width: 25%;
+          
+        }
+      }
+      @media only screen and (min-width: 1000px) {
+        .columns {
+          width: 20%;
+        
+        }
+      }
+      @media only screen and (max-width: 1500px) {
+        .columns {
+          width: 25%;
+        
+        }
+      }
+    
+    </style>
+  </head>
+  <body>
+    <div class="columns">
+      <div>Heading1</div>
+      <div>Heading2</div>
+      <div>Heading3</div>
+      <div>Heading4</div>
+      <div>Heading5</div>
+    </div>
+  </body>
+</html>

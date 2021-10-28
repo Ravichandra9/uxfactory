@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>css tables</title>
+    <style>
+           table {
+             width: 100%;
+             text-align: center;
+           }
+           table,
+           th,
+           td {
+             border: darkcyan 1px solid;
+             border-collapse: collapse;
+           }
+           #student:nth-child(even){
+             background-color: rgb(27, 24, 206);
+           }
+           #student :hover {
+             background-color: gold;
+           }
+           #student th{
+             background-color: deepskyblue;
+           }
+    </style>
+  </head>
+  <body>
+    <table id="student">
+      <tr>
+        <th>student name</th>
+        <th>intial</th>
+        <th>qualification</th>
+        <th>roll no</th>
+      </tr>
+      <tr>
+        <td>Harish</td>
+        <td>Gumpa</td>
+        <td>B.tech</td>
+        <td>47</td>
+      </tr>
+      <tr>
+        <td>chaitanya</td>
+        <td>Gudimella</td>
+        <td>B.tech</td>
+        <td>45</td>
+      </tr>
+      <tr>
+        <td>Ravichandra</td>
+        <td>Gumma</td>
+        <td>B.tech</td>
+        <td>46</td>
+      </tr>
+      <tr>
+        <td>Balaji</td>
+        <td>Palepu</td>
+        <td>B.tech</td>
+        <td>48</td>
+      </tr>
+    </table>
+  </body>
+</html>

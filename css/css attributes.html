@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>css attributes selector</title>
+    <style>
+      a[target="_blank"] {
+        background-color: chartreuse;
+      }
+      div[title~="sample"] {
+        border: darkmagenta 2px dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" target="_blank"> Home</a>
+    <a href="#" target="">About us</a>
+    <a href="#">Contact us</a>
+    <div title="div sample">div</div>
+    <div title="sample">div1</div>
+    <div title="div">div2</div>
+  </body>
+</html>
