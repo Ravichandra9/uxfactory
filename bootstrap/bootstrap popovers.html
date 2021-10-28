@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap popovers</title>
+    <link rel="stylesheet" href="/uxfactory/css/css/bootstrap.css" />
+    <script src="/uxfactory/css/js/bootstrap.js"></script>
+    <script src="/uxfactory/css/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-container="body"
+      data-bs-toggle="popover"
+      data-bs-placement="top"
+      data-bs-content="Top popover"
+    >
+      Popover on top
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-container="body"
+      data-bs-toggle="popover"
+      data-bs-placement="right"
+      data-bs-content="Right popover"
+    >
+      Popover on right
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-container="body"
+      data-bs-toggle="popover"
+      data-bs-placement="bottom"
+      data-bs-content="Bottom popover"
+    >
+      Popover on bottom
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-container="body"
+      data-bs-toggle="popover"
+      data-bs-placement="left"
+      data-bs-content="Left popover"
+    >
+      Popover on left
+    </button>
+    <script> popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})</script>
+  </body>
+</html>

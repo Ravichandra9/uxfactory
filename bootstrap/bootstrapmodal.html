@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Modal </title>
+    <link rel="stylesheet" href="/uxfactory/css/css/bootstrap.css" />
+    <script src="/uxfactory/css/js/bootstrap.js"></script>
+  </head>
+  <body>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Register to Enter
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form
+            style="text-align: center"
+            name="log in"
+            action="/login.php"
+            target="_self"
+            method="POST" >
+               <label for="fname"> First name:</label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder=" First Name">
+                <br><br>
+            
+            <label for="middle name"> Middle name:</label>
+            <input
+              type="text"
+              id="Middlename"
+              name="middle name"
+              placeholder=" Middle Name"><br><br>
+            <label for="lname">Last name:</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder=" Please Enter Last Name"><br><br>
+            <label for="password"> Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Please Enter Password">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Enter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      </body>
