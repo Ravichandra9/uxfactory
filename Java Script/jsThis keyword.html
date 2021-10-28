@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS This keyword</title>
+  </head>
+  <body>
+    <script>
+          console.log("global this", this);
+
+          function function1() {
+            var r = 10;
+            var c = 15;
+            console.log("Infunction this", this);
+          }
+          function1();
+
+          var myobj = {
+                student: "Ravichandra",
+                batch: "july",
+                insistute: "uxfactory",
+                year: "2021",
+                place: "ongole",
+                studentdetails: function () {
+                    console.log("Inobject this", this);
+                    return this.student + " is in " + this.insistute + " is of";
+                }
+            }
+        var studentname = myobj.studentdetails();
+        console.log(studentname);
+
+       // window.open("http://google.com");
+        console.log(window.Location.href);
+        window.alert("BOM Alert");
+    </script>
+  </body>
+</html>

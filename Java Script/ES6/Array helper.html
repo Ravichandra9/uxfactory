@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6</title>
+  </head>
+  <body>
+    <script>
+      //round of all the decimal numbers in an array and sum all the values
+      var numbers = [1.2, 2.1, 3.4, 4.5, 5.7];
+      sum = (total, num) => {
+        return total + Math.round(num);
+      };
+      let result = numbers.reduce(sum, 0);
+      console.log(result);
+
+      // get the value of first element in an array that has value less than 2
+
+      var num = [1, 3, 5, 7];
+      var result1 = num.find((val) => {
+        return val < 2;
+      });
+      console.log(result1);
+
+      // get the value of first element in an array that has value greater than 20
+
+      var num1 = [5, 37, 50, 7];
+      var find = num1.find((val) => {
+        return val > 20;
+      });
+      console.log(find);
+
+      //filter data based on id in an array of objects
+
+      var obj = [
+        { id: 1, name: "Ravi" },
+        { id: 2, name: "chandra" },
+      ];
+      var details = obj.filter((val1) => {
+        return val1.id < 2;
+      });
+      console.log(details);
+
+      //checking if all the property values in an array of object is same or not
+
+      var person = [
+        { firstName: "ravichandra", age: "22" },
+        { firstName: "Harish", age: "23" },
+        { firstName: "praveen", age: "21" },
+      ];
+      let R = person[0].firstName;
+      var count = 0;
+      var person1 = num.map((person) => {
+        if (R === person.firstname) {
+          count++;
+          // console.log("object found inside the array", person1);
+        } else {
+          // console.log("object not found");
+        }
+        return count;
+      });
+
+      if (person1 === person.length) {
+        console.log("value is same");
+      } else {
+        console.log("value is not same");
+      }
+    </script>
+  </body>
+</html>

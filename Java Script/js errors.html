@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Java Script Errors</title>
+    </head>
+    <body>
+        <div id="basic"></div>
+        <script>
+            try {
+                alert("There will be a error");
+            } catch (error) {
+                       document.getElementById("basic").innerHTML = error.message;
+            }
+             
+           
+        </script>
+    </body>
+</html>

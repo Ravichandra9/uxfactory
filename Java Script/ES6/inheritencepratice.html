@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inhertience pratice</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(eat) {
+          this.eat = eat;
+        }
+        animaldata() {
+          console.log("Animals Respirate Oxygen");
+        }
+        animalMov() {
+          console.log(" Animals move from one place to another place ");
+        }
+      }
+      class Dog extends Animal {
+        constructor(eat, sound, fly, climb) {
+          super(eat);
+          this.eat = eat;
+          this.sound = sound;
+          this.fly = fly;
+          this.climb = climb;
+        }
+        DogData() {
+          console.log("The dog eat meat");
+        }
+      }
+      class Lion extends Animal {
+        constructor(eat, sound, fly, climb) {
+          super(eat);
+          this.eat = eat;
+          this.sound = sound;
+          this.fly = fly;
+          this.climb = climb;
+        }
+        LionData() {
+          console.log("The Lion is king of Jungle");
+        }
+      }
+      const dog = new Dog("meat", "bow - bow", "no flying", "no climb");
+      console.log(dog);
+      dog.DogData();
+      dog.animaldata();
+      const lion = new Lion("meat", "Roaring", "no flying", "no climb");
+      console.log(lion);
+      lion.LionData();
+      lion.animalMov();
+    </script>
+  </body>
+</html>

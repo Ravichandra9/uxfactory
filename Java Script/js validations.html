@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>registaration forms</title>
+  </head>
+  <body>
+    <style>
+      .error {
+        color: red;
+        display: none;
+      }
+    </style>
+    <script>
+      function validateregform() {
+        var fname = document.forms["registarationpage"]["fname"].value;
+        var lname = document.forms["registarationpage"]["lname"].value;
+        var password = document.forms["registarationpage"]["password"].value;
+        var confirmpassword =
+          document.forms["registarationpage"]["confirmpassword"].value;
+        var email = document.forms["registarationpage"]["email"].value;
+        var emailfilter =
+          /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var phonenumber =
+          document.forms["registarationpage"]["phonenumber"].value;
+        var district = document.forms["registarationpage"]["district"].value;
+
+        var male = document.forms["registarationpage"]["gender"][0].checked;
+        var female = document.forms["registarationpage"]["gender"][1].checked;
+        var others = document.forms["registarationpage"]["gender"][2].checked;
+        var agreeterms =
+          document.forms["registarationpage"]["agreeterms"].checked;
+
+        if (fname != "" && parseInt(fname.length) <= 8) {
+          document.getElementById("fnameerror").style.display = "none";
+        } else {
+          document.getElementById("fnameerror").style.display = "block";
+        }
+
+        if (lname != "" && parseInt(lname.length) <= 8) {
+          document.getElementById("lnameerror").style.display = "none";
+        } else {
+          document.getElementById("lnameerror").style.display = "block";
+        }
+        if (password != "") {
+          document.getElementById("passworderror").style.display = "none";
+        } else {
+          document.getElementById("passworderror").style.display = "block";
+        }
+        if (confirmpassword != "") {
+          document.getElementById("confirmpassworderror").style.display =
+            "none";
+        } else {
+          document.getElementById("confirmpassworderror").style.display =
+            "block";
+        }
+        if (password == confirmpassword) {
+          document.getElementById("passwordmismatcherror").style.display =
+            "none";
+        } else {
+          document.getElementById("passwordmismatcherror").style.display =
+            "block";
+        }
+        if (email == "") {
+          document.getElementById("emailerror").style.display = "block";
+        } else if (!emailfilter.test(email)) {
+          document.getElementById("emailerror").style.display = "block";
+        } else {
+          document.getElementById("emailerror").style.display = "none";
+        }
+        if (phonenumber == "") {
+          document.getElementById("phonenumbererror").style.display = "block";
+        } else {
+          document.getElementById("phonenumbererror").style.display = "none";
+        }
+        if (district == "") {
+          document.getElementById("districterror").style.display = "block";
+        } else {
+          document.getElementById("districterror").style.display = "none";
+        }
+
+        if (male || female || others) {
+          document.getElementById("gendererror").style.display = "none";
+        } else {
+          document.getElementById("gendererror").style.display = "block";
+        }
+        if (agreeterms) {
+          document.getElementById("agreetermserror").style.display = "none";
+        } else {
+          document.getElementById("agreetermserror").style.display = "block";
+        }
+
+        return false;
+      }
+    </script>
+    <form
+      name="registarationpage"
+      action="/registration.php"
+      method="POST"
+      onsubmit="return validateregform()"
+    >
+      <label>first name:</label><br />
+      <input type="text" name="fname" id="fname" oninput="validateregform()" />
+      <span id="fnameerror" class="error">
+        * Please enter a valid first name</span
+      ><br />
+      <label>last name:</label><br />
+      <input type="text" name="lname" id="lname" oninput="validateregform()" />
+      <span id="lnameerror" class="error">
+        * Please enter a valid last name</span
+      >
+      <br />
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        oninput="validateregform()"
+      /><br />
+      <span id="passworderror" class="error"> * please enter password </span>
+      <br />
+      <label for="password"> confirm Password:</label><br />
+      <input
+        type="password"
+        id="confirmpassword"
+        name="confirmpassword"
+        oninput="validateregform()"
+      /><br />
+      <span id="confirmpassworderror" class="error">
+        * Please confirm your password..</span
+      ><br />
+      <span id="passwordmismatcherror" class="error">
+        * passwords are Mismatched..</span
+      ><br />
+      <label for="email"> Email id:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        oninput="validateregform()"
+      /><br />
+      <span id="emailerror" class="error">
+        *Please enter a valid email address</span
+      >
+      <br />
+      <label for="phone number">Phone Number:</label><br />
+      <input
+        type="number"
+        id="phonenumber"
+        name="phonenumber"
+        oninput="validateregform()"
+      /><br />
+      <span id="phonenumbererror" class="error">
+        *Please enter a valid Phone Number</span
+      ><br /><br />
+      <select id="district" name="district" onchange="validateregform()">
+        <option value="">please select district</option>
+        <option value="prakasam">Prakasam</option>
+        <option value="Nellore">Nellore</option>
+        <option value="Chittor">Chittor</option>
+        <option value="Kadapa">Kadapa</option>
+        <option value="Kurnool">Kurnool</option>
+        <option value="Ananthapur">Ananthapur</option>
+        <option value="Guntur">Guntur</option>
+        <option value="Krishna">Krishna</option>
+        <option value="East Godavari">East Godavari</option>
+        <option value="West Godavari">West Godavari</option>
+        <option value="Vishakapatnam">Vishakapatnam</option>
+        <option value="Vizayanagram">Vizayanagram</option>
+        <option value="Srikakulam">Srikakulam</option>
+      </select>
+      <span id="districterror" class="error"> *Please Select your District</span
+      ><br /><br />
+      <label> Gender: </label><br />
+      <input
+        type="radio"
+        id="male"
+        name="gender"
+        value="male"
+        onclick="validateregform()"
+      />
+      <label for="male"> Male</label><br />
+      <input
+        type="radio"
+        id="Female"
+        name="gender"
+        value="female"
+        onclick="validateregform()"
+      />
+      <label for="female"> Female</label><br />
+      <input
+        type="radio"
+        id="Others"
+        name="gender"
+        value="others"
+        onclick="validateregform()"
+      />
+      <label for="others"> Others</label>
+      <span id="gendererror" class="error"> *please select gender</span
+      ><br />
+
+      <input
+        type="checkbox"
+        id="agreeterms"
+        name="agreeterms"
+        onclick="validateregform()"
+      />
+      <label> I agree Terms & Conditions</label>
+      <span id="agreetermserror" class="error">
+        *please agree terms and conditions</span
+      ><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

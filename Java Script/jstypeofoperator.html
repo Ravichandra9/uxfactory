@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Type of Operator</title>
+</head>
+<body>
+    <div id="type"></div>
+    <div id="display"></div>
+    <script>
+        document.getElementById ("type").innerHTML =
+         typeof "200" + "<br>"+
+         typeof 200 + "<br>" +
+         typeof true + "<br>" +
+         typeof {name:"ravi" , value:"7"} + "<br>" +
+         typeof [ 1, 2, 3, 4] + "<br>" +
+         typeof function my() {} + "<br>";
+
+
+
+         document.getElementById("display").innerHTML =
+          Number("100") + "<br>" +
+         typeof (10).toString() +"<br>"  ;
+          
+    </script>
+    
+</body>
+</html>

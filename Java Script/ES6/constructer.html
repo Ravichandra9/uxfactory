@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 class 2</title>
+  </head>
+  <body>
+    <script>
+      class shape {
+        constructor(type, side) {
+          this.shapetype = type;
+          this.sides = side;
+        }
+        dimension() {
+          console.log(this.shapetype, "having a dimension of 2D");
+        }
+        diagonal() {
+          console.log(this.shapetype + "having diagonals of" + this.sides);
+        }
+      }
+
+      const shape_one = new shape("pentagon", "5");
+      console.log(shape_one);
+      shape_one.dimension();
+      shape_one.diagonal();
+
+      const shape_two = new shape("square", "4");
+      console.log(shape_two);
+      shape_two.dimension();
+      shape_two.diagonal();
+
+      const shape_three = new shape("rhombus", "4");
+      console.log(shape_three);
+      shape_three.dimension();
+      shape_three.diagonal();
+    </script>
+  </body>
+</html>

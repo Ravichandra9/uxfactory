@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritence</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(bark, speak) {
+          this.bark = bark;
+          this.speak = speak;
+        }
+        animaldata() {
+          console.log("Animals Respirate Oxygen");
+        }
+        animalMov() {
+          console.log("Animals move from one place to another place ");
+        }
+      }
+      class Dog extends Animal {
+        constructor(eat, bark) {
+          super(bark);
+          this.eat = eat;
+          this.bark = bark;
+        }
+        DogData() {
+          console.log("The dog eat meat");
+        }
+      }
+      class Lion extends Animal {
+        constructor(eat, speak) {
+          super(speak);
+          this.eat = eat;
+          this.speak = speak;
+        }
+        LionData() {
+          console.log("The Lion is king of Jungle");
+        }
+      }
+      const dog = new Dog("meat", "bow - bow");
+      console.log(dog);
+      dog.DogData();
+      dog.animaldata();
+      const lion = new Lion("meat", "Roaring");
+      console.log(lion);
+      lion.LionData();
+      lion.animalMov();
+    </script>
+  </body>
+</html>

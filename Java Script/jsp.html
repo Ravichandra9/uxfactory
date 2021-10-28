@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jskeyword</title>
+  </head>
+
+  <body>
+    <script>
+      console.log("globalthis", this);
+
+      function myfunction() {
+        var x = 7;
+        var y = 12;
+       // console.log("Infunction this", this);
+         return this.student + "isin" + this.batch + "batch";
+      }
+      myfunction();
+
+      var myobj = {
+        student: "vishnu",
+        batch: "july",
+        insttitute: "uxfactory",
+
+        year: "2021",
+        place: "ongole",
+        studentdetails: function () {
+          console.log("Inobject this", this);
+          return this.student + "is in" + this.insttitute + "is in insistute";
+        },
+      };
+      var statementname = myobj.studentdetails();
+      // console.log("studentname");
+    </script>
+  </body>
+</html>

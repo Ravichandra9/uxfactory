@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Java Script Events</title>
+  </head>
+  <body>
+    <script>
+      function myfunction() {
+        document.getElementById("para").innerHTML = new Date();
+      }
+    </script>
+    <p id="para"></p>
+    <button type="button" onmouseover="myfunction()">update</button>
+    <input type="text" onclick="myfunction()" value="" />
+  </body>
+</html>

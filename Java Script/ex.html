@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Java Script Multiplication</title>
+  </head>
+  <body>
+    <script>
+      function myfunction() {
+        var n = 10,
+          j = 7,
+          result = 0;
+        for (var i = 1; i <= n; i++) {
+          result = j * i;
+          document.write(j + "*" + i + "=" + result + "<br>");
+        }
+      }
+    </script>
+    <h2 id="para">7 th Table is displayed when your Hover or Click</h2>
+    <input type="text" onclick="myfunction()" value="enter any Number" />
+    <button type="button" onmouseover="myfunction()">update</button>
+  </body>
+</html>
